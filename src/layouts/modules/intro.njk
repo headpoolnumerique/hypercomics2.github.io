@@ -1,0 +1,24 @@
+{##}
+<section id="{{ item.data.title | slugify}}" class="active talk textBlock intro">
+  {% include "./prev.njk" %}
+  <main>
+
+
+  <section class="logo">
+   {# <p>pendant ce temps là, à la</p> #}
+   <img  src="/images/logo-head.png" />
+</section>
+
+
+  <!-- <time>{{ item.data.date | monthYear }}</time> -->
+  <!-- <header> -->
+  <!--   <h2>{{ item.data.title }}</h2> -->
+  <!-- </header> -->
+  <section>
+
+   <h1>hypercomics</h1>
+   {{item.templateContent | safe}}
+   </section>
+  </main>
+  {% include "./next.njk" %}
+</section>

@@ -1,0 +1,30 @@
+<section id="{{ item.data.title | slugify  }}"  class="journal">
+
+  {% include "./prev.njk" %}
+
+  <header>
+    <time>{{ item.data.date | monthYear }}</time>
+    {# {% include "./link.njk" %} #}
+    <h2>{{ item.data.title }}</h2>
+  </header>
+  <article class="dialogue" {%if item.data.id%}data-dialog-line="{{item.data.id}}"{%endif%} >
+
+    {{item.templateContent | safe}}
+
+  </article>
+    
+  {% include "./next.njk" %}
+
+  <figure class="portraits">
+  <div class="portrait-clem">
+    <img class="" src="images/clem.png" alt="clem">
+    <p class="nom-clem">Clément</p>
+    </div>
+  <div class="portrait-ju">
+      <img class="" src="images/ju.png" alt="ju">
+    <p class="nom-ju">Ju</p>
+    </div>
+    </figure>
+</section>
+
+

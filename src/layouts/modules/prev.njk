@@ -1,0 +1,2 @@
+{% set previousPost = collections.things | getPreviousCollectionItem(item) %}
+{% if previousPost %} <a class="prevnext previous" href="#{{ previousPost.data.title | slugify}}"> {% include "../icons/arrowToLeft.njk" %} <span class="text">{{ previousPost.data.title }}</span></a>{% endif %}

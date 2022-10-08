@@ -1,0 +1,37 @@
+{
+  "name": "eleventy-plugin-unfurl",
+  "version": "0.0.6",
+  "description": "Unfurl links into preview cards in Eleventy",
+  "homepage": "https://github.com/daviddarnes/eleventy-plugin-unfurl",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy",
+    "bump": "npm --no-git-tag-version version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviddarnes/eleventy-plugin-unfurl.git"
+  },
+  "keywords": [
+    "11ty",
+    "11ty-plugin",
+    "eleventy",
+    "eleventy-plugin",
+    "unfurl",
+    "bookmarks",
+    "cards"
+  ],
+  "author": {
+    "name": "daviddarnes",
+    "url": "https://darn.es"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daviddarnes/eleventy-plugin-unfurl/issues"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "markdown-it": "^12.3.2"
+  }
+}

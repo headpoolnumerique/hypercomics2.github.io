@@ -1,0 +1,71 @@
+@import url(fonts.css);
+
+:root {
+  --font-comics: "cabinet grotesk";
+  --font-sans: "cabinet grotesk";
+  --color-text: #2f1e2d;
+  --color-accent: grey;
+  --color-body: blue;
+  --color-ju: orange;
+  --color-clem: purple;
+}
+body {
+  text-transform: uppercase;
+  font-family: var(--font-comics);
+}
+.things {
+  /* color: red; */
+}
+
+h1 {
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 16px;
+  text-decoration-thickness: 1px;
+}
+
+.ju {
+  color: var(--color-ju);
+}
+
+.clement {
+  color: var(--color-clement);
+}
+h1::after {
+  content: '';
+  display: block;
+  height: 1em;
+  width: 1px;
+  background: black;
+  margin: 0 auto;
+}
+nav {
+  position: sticky;
+  top: 0;
+}
+nav ul {
+  list-style-type: none;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: nowrap;
+  border-top: 1px solid black;
+}
+
+nav li span {
+  text-decoration: overline;
+  position: relative;
+  background: white;
+  padding: .2em 2ch;
+}
+
+nav li::before {
+  height: 1.4em;
+  width: 1px;
+  margin: 0 auto;
+  content: '';
+  background: black;
+  display: block;
+}
+

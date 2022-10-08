@@ -1,0 +1,2 @@
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
+{% if nextPost %}Next Blog Post: <a class="next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}

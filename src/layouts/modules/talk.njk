@@ -1,0 +1,17 @@
+<section id="{{ item.data.title | slugify  }}" class="talk">
+  {% include "./prev.njk" %}
+  <time>{{ item.data.date | monthYear }}</time>
+  {% include "./link.njk" %}
+  <header>
+    <h2>{{ item.data.title }}</h2>
+    <p>{{ item.data.website }}</p>
+  </header>
+  {% include "./link.njk" %}
+  <!-- <iframe class="screenshot" scrolling="no" src="{{item.data.website}}"></iframe> -->
+  <a target="_blank" class="screenshot" href="{{ item.data.website }}"
+    ><img src="/images/{{ item.data.image }}"
+  /></a>
+  {% include "./link.njk" %}
+  {% include "./audioplayer.njk" %}
+  {% include "./next.njk" %}
+</section>

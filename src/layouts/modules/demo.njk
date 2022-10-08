@@ -1,0 +1,15 @@
+<section id="{{ item.data.title | slugify  }}" class="talk demo">
+  {% include "./prev.njk" %}
+  <time>{{ item.data.date | monthYear }}</time>
+  {% include "./link.njk" %}
+  <header>
+    <h2>{{ item.data.title }}</h2>
+    <p>{{ item.data.intro }}</p>
+             {{item.templateContent | safe}}
+<a target="_blank" href="{{ item.data.urldemo }}" >open in your browser </a>
+  </header>
+  <div class="screenshot resizer">
+  <iframe loading="lazy" scrolling="yes" resize src="{{ item.data.urldemo }}"></iframe>
+ </div> 
+  {% include "./next.njk" %}
+</section>

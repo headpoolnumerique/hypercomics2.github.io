@@ -1,0 +1,2 @@
+{% set nextPost = collections.things | getNextCollectionItem(item) %}
+{% if nextPost %}<a class=" prevnext next" href="#{{ nextPost.data.title | slugify }}"> {% include "../icons/arrowToRight.njk" %}<span class="text">{{ nextPost.data.title }}</span></a>{% endif %}

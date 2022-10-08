@@ -1,0 +1,13 @@
+https://hessoit-my.sharepoint.com/:w:/g/personal/clement_paurd_hes-so_ch/EXZsF9p_HGFAvLTUt2I0nu0Bj_o5AgBQNQpuMr0GmBhh3Q?rtime=o9EXVGKS2kg
+
+1. menu
+2. sub menu
+3. content.
+
+
+
+internationalization asap with v2
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
+https://www.11ty.dev/docs/plugins/i18n/
+
+https://www.11ty.dev/docs/plugins/i18n/
