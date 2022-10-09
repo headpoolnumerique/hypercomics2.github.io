@@ -1,22 +1,30 @@
 @import url(fonts.css);
 
 :root {
-  --font-comics: "cabinet grotesk";
-  --font-sans: "cabinet grotesk";
+  --font-comics: 'cabinet grotesk';
+  --font-sans: 'cabinet grotesk';
+  --font-big: 'tanker';
   --color-text: #2f1e2d;
   --color-accent: grey;
+  --color-grey: #ccc;
   --color-body: blue;
-  --color-ju: orange;
-  --color-clem: purple;
+  --color-ju: blue;
+  --color-clement: purple;
 }
 body {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: var(--font-comics);
 }
 .things {
   /* color: red; */
 }
-
+date {
+  display: block;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 10em;
+  margin-bottom: 0.5em;
+}
 h1 {
   width: max-content;
   margin: 0 auto;
@@ -57,7 +65,7 @@ nav li span {
   text-decoration: overline;
   position: relative;
   background: white;
-  padding: .2em 2ch;
+  padding: 0.2em 2ch;
 }
 
 nav li::before {
@@ -69,3 +77,116 @@ nav li::before {
   display: block;
 }
 
+/* date */
+
+.date {
+  width: max-content;
+  background: white;
+  margin: 2em auto 1em;
+  position: relative;
+  display: block;
+  padding: 0 0.5ch;
+}
+
+.date::before {
+  content: '';
+  background: var(--color-grey);
+  inset: 0.5em -7ch;
+  display: block;
+  height: 1px;
+  position: absolute;
+  z-index: -1;
+}
+
+/*dialog*/
+
+.dialog {
+  --portrait: 40px;
+  display: grid;
+  grid-template-columns: [juface] var(--portrait) [ju] 1fr [overlap] 2fr [clem] 1fr [clemface] var(
+      --portrait
+    );
+  grid-template-rows: [text] auto [portrait-start] auto [portrait-end];
+  width: clamp(300px, 75vw, 800px);
+  margin: 0 auto;
+  position: relative;
+  gap: 0 2ch;
+  margin-bottom: 3em;
+}
+
+
+.dialog .content {
+  grid-row: text;
+  padding: 0 28%;
+  margin-bottom: 1em;
+}
+
+.dialog .content * {
+  background: white;
+}
+
+.dialog .content p {
+  margin: 0;
+}
+.dialog .content p + p {
+  margin-top: .7em;
+}
+
+.ju .content {
+  grid-column: ju / clem;
+}
+
+.clement .content {
+  grid-column: overlap / clemface;
+}
+
+/*portrait*/
+.face {
+  content: '';
+  border-radius: 50%;
+  width: 40px;
+  height: 90px;
+  left: -5em;
+  border: 2px solid currentColor;
+  align-self: bottom;
+  grid-row: 2;
+  margin-top: 2em;
+}
+
+.ju .face {
+  grid-column: juface;
+}
+
+.clement .face {
+  grid-column: clemface;
+}
+.dialog .content {
+  text-align: center;
+}
+
+/*dialogline*/
+.dialoglines {
+  grid-row: portrait;
+  z-index: -1;
+
+}
+.dialoglines svg path {
+  stroke-width: 0.5;
+}
+.ju .dialoglines {
+  grid-column: ju / clem;
+}
+.ju .dialoglines .right {
+  display: none;
+}
+.clement .dialoglines {
+  grid-column: overlap / clemface;
+}
+
+.clement .dialoglines .left {
+  display: none;
+}
+.onomatop .content {
+  font-family: var(--font-big);
+  font-size: 3em;
+}

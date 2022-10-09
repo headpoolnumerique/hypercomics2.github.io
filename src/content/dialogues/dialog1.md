@@ -8,34 +8,43 @@ intro: text d’intro si on veut commencer par une vrai intro.
 
 
 
+{% ladate "2021-10-18" %}
+
 {% dialog "Ju", "2021-10-18" %}
 Welcome! 
-Bienvenue, Clément. Tu as amené de la pizza, j'espère !
+
+Bienvenue, Clément. Tu as amené de la pizza, j'espère !
 {% enddialog %}
 
 
-{% dialog "Clément", "2021-10-25" %}
+{% ladate "2021-10-25" %}
 
-Hello c'est bien ici le rendez-vous ? 
+{% dialog "Clément"  %}
+
+Hello c'est bien ici le rendez-vous ? 
 
 {% enddialog %}
 
-{% dialog "Ju", "2022-03-18" %}
+{% ladate  "2022-03-18"  %} 
+ 
+
+{% dialog "Ju" %}
 
 Oui ! Top !
+
 Bon j’ai passé la journée à lutter avec une connerie de scroll qui passe pas au bon format, ça ouvre donc de bonnes pistes de galère sur le plan techno. 
 
 Toi? 
  
 {% enddialog %}
 
-{% dialog "Clément", "2022-03-18" %}
+{% dialog "Clément" %}
 
-Entre un tableau Excel d'admission en première année à rendre lundi 8h et un personnage qui marche en bas de mon écran ; ) 
+Entre un tableau Excel d'admission en première année à rendre lundi 8h et un personnage qui marche en bas de mon écran 😉   
   
 {% enddialog %}
 
-{% dialog "Ju", "2022-03-18" %}
+{% dialog "Ju" %}
 
 Lol, je vois 
 
@@ -43,45 +52,41 @@ Ton découpage avance?
  
 {% enddialog %}
 
-{% dialog "Clément", "2022-03-18" %}
+{% dialog "Clément" %}
 
 je prépare une nouvelle version plus dessinée 
  
 {% enddialog %}
 
-{% dialog "Ju", "2022-03-18" %}
+{% dialog "Ju", "big", "onomatop" %}
 
-Cool ! 
+Cool !
  
 {% enddialog %}
 
-{% dialog "Clément", "2022-03-18" %}
+{% dialog "Clément" %}
 
 Ça avance doucement mais ça avance 
  
 {% enddialog %}
 
-{% dialog "Ju", "2022-03-18" %}
+{% dialog "Ju" %}
 
-J’ai commencé à regarder :  
-
-le scroll, 
-
-les animation (idle) et au click 
+J’ai commencé à regarder le scroll et les animation (idle) et au click. 
 {% enddialog %}
 
-{% dialog "Clément", "2022-03-18" %}
+{% dialog "Clément" %}
 Je pense que dans un premier temps on ira choper des effets à droite à gauche (fumée etc) 
  
 {% enddialog %}
 
-{% dialog "Ju", "2022-03-18" %}
+{% dialog "Ju", class="ok" %}
 
 Ok !
  
 {% enddialog %}
 
-{% dialog "Clément", "2022-03-18" %}
+{% dialog "Clément" %}
 
 Et c'est une fiiiiiiiin de journée ! 
 
@@ -90,7 +95,7 @@ Bon week-end et bon scroll horizontal !
  
 {% enddialog %}
 
-{% dialog "Ju", "2022-03-18" %}
+{% dialog "Ju" %}
 
 J’ai fini à 19h30 avec un défilement rigolo,  
 
