@@ -1,0 +1,14 @@
+<article style="--color-writer: var(--color-{{sequence.data.writerid}})" id="{{ sequence.data.title | slugify }}" class="mail {{sequence.data.writerid}}">
+    <h4 class="date">
+        <date>{{ sequence.data.date | ladate }}</date>
+    </h4>
+    <section>
+        <header>
+            <p>from: {{ sequence.data.author }}</p>
+            <h2>{{ sequence.data.title }}</h2>
+            <p>{{ sequence.data.intro }}</p>
+        </header>
+        {{ sequence.templateContent | safe }}
+    </section>
+    <img class="mail-author" src="/images/{{sequence.data.writerid}}_ordi.png" />
+</article>

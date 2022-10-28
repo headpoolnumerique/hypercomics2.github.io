@@ -4,7 +4,7 @@
  * to be transformed as a figure with figcaption.
  */
 
-const imgUrl = "/";
+const imgUrl = "/images/";
 
 const slugify = require('slugify');
 const markdownIt = require("markdown-it");
@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig, options) {
       <div class="content">${markdownLib.render(content)}</div>
       ${arc(content.length)}
       <div class="face">
-        <img src="${face ? imgUrl+personname + "-" + face + '.svg' : imgUrl+personname + '-idle.jpg'}"   alt="face of ${person}"/>
+        <img src="${face ? imgUrl+personname + "_" + face + '.png' : imgUrl+personname + '_talk.png'}"   alt="face of ${person}"/>
       </div>
     </section>`
     return  output 
@@ -58,6 +58,9 @@ module.exports = function (eleventyConfig, options) {
 
   eleventyConfig.addShortcode("ladate", function (date) {
     return `<h4 class="date"><date>${new Date(date).toLocaleDateString()}</date></h4>`;
+  });
+  eleventyConfig.addFilter("ladate", function (date) {
+    return new Date(date).toLocaleDateString();
   });
 };
 

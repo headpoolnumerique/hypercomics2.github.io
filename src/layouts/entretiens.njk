@@ -1,0 +1,28 @@
+
+{% extends "base.njk" %}
+
+{% block content %}
+  <h1>{{title}}</h1>
+
+  {% for item in collections.talks %}
+    
+
+<section id="{{ item.data.title | slugify  }}" class="talk">
+  <time>{{ item.data.date | monthYear }}</time>
+  {% include "./modules/link.njk" %}
+  <header>
+    <h2>{{ item.data.title }}</h2>
+    <p>{{ item.data.website }}</p>
+  </header>
+  {% include "./modules/link.njk" %}
+  <!-- <iframe class="screenshot" scrolling="no" src="{{item.data.website}}"></iframe> -->
+  <a target="_blank" class="screenshot" href="{{ item.data.website }}"
+    ><img src="/images/{{ item.data.image }}"
+  /></a>
+  {% include "./modules/link.njk" %}
+  {% include "./modules/audioplayer.njk" %}
+  {% include "./modules/next.njk" %}
+</section>
+  {% endfor %}   
+
+{% endblock content %}

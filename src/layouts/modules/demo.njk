@@ -1,15 +1,30 @@
-<section id="{{ item.data.title | slugify  }}" class="talk demo">
-  {% include "./prev.njk" %}
-  <time>{{ item.data.date | monthYear }}</time>
-  {% include "./link.njk" %}
-  <header>
-    <h2>{{ item.data.title }}</h2>
-    <p>{{ item.data.intro }}</p>
-             {{item.templateContent | safe}}
-<a target="_blank" href="{{ item.data.urldemo }}" >open in your browser </a>
-  </header>
-  <div class="screenshot resizer">
-  <iframe loading="lazy" scrolling="yes" resize src="{{ item.data.urldemo }}"></iframe>
- </div> 
-  {% include "./next.njk" %}
-</section>
+<article id="{{ sequence.data.title | slugify }}" class="demo">
+    <h4 class="date">
+        <date>{{ sequence.data.date | ladate }}</date>
+    </h4>
+    <header>
+        <h2>{{ sequence.data.title }}</h2>
+        <p>{{ sequence.data.intro }}</p>
+    </header>
+    <section class="content">
+        {{ sequence.templateContent | safe }}
+    </section>
+    <aside class="sizes">
+        <button data-target="#{{ sequence.data.id | slugify }}" class="play">play</button>
+        <button data-target="#{{ sequence.data.id | slugify }}" class="pause">pause</button>
+        <button data-target="#{{ sequence.data.id | slugify }}" class="portrait">portrait</button>
+        <button data-target="#{{ sequence.data.id | slugify }}" class="landscape">paysage</button>
+        <a target="_blank" href="{{ sequence.data.urldemo }}">open in your browser</a>
+    </aside>
+    <section class="wrapperdemo">
+        <div class="pause screenshot resizer"
+             style="--frame-back: url(/images/{{ sequence.data.id }}-screenshot.png)"
+             id="{{ sequence.data.id | slugify }}">
+            <iframe loading="lazy"
+                    data-url="{{ sequence.data.urldemo }}"
+                    scrolling="yes"
+                    resize>
+                    </iframe>
+        </div>
+    </section>
+</article>

@@ -1,80 +1,96 @@
-
 const slugify = require('slugify')
-const flaxaudio = require("./flaxaudio/"); // For local development
-const classy = require("markdown-it-classy"); 
-const markdownIt = require("markdown-it");
+const flaxaudio = require('./flaxaudio/') // For local development
+const classy = require('markdown-it-classy')
+const markdownIt = require('markdown-it')
 const dialog = require('./plugins/dialog.js')
-
+const markdownItPandoc = require('markdown-it-pandoc')
+const yaml = require('js-yaml')
 module.exports = function (eleventyConfig) {
 
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true
-  };
-
   // add class to the MD
-  
 
- eleventyConfig.setLibrary("md", markdownIt(options).use(classy));
 
-  eleventyConfig.addPassthroughCopy({ "static/css": "/css" });
-  eleventyConfig.addPassthroughCopy({ "static/fonts": "/fonts" });
-  eleventyConfig.addPassthroughCopy({ "static/js": "/js" });
-  eleventyConfig.addPassthroughCopy({ "static/images": "/images" });
-  eleventyConfig.addPassthroughCopy({ "static/videos": "/videos" });
-  eleventyConfig.addPassthroughCopy({ "static/audio": "/audio" });
-
+  eleventyConfig.addPassthroughCopy({ 'static/css': '/css' })
+  eleventyConfig.addPassthroughCopy({ 'static/fonts': '/fonts' })
+  eleventyConfig.addPassthroughCopy({ 'static/js': '/js' })
+  eleventyConfig.addPassthroughCopy({ 'static/images': '/images' })
+  eleventyConfig.addPassthroughCopy({ 'static/videos': '/videos' })
+  eleventyConfig.addPassthroughCopy({ 'static/audio': '/audio' })
 
   let filters = `{% import "macros.njk" as macro with context %}`
 
-
   eleventyConfig.addPlugin(flaxaudio, {
     path: `/audio/`,
-    audioEl: false
-  });
+    audioEl: false,
+  })
 
+  // configure the library with options
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  }
+  let markdownLib = markdownIt(options).use(classy).use(markdownItPandoc)
 
+  // set the library to process markdown files
+  eleventyConfig.setLibrary('md', markdownLib)
+
+  eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents))
+
+  // add plugins for dialog
   eleventyConfig.addPlugin(dialog)
 
-
   eleventyConfig.addFilter('slugify', function (value) {
-    return slugify(value);
+    if(value) {return slugify(value)}
+    return (value)
+  })
+  eleventyConfig.addFilter('markdownify', function (value) {
+    return markdownIt.render(value)
   })
 
+  eleventyConfig.addFilter('markdownifyInline', function (value) {
+    return markdownIt.renderInline(value)
+  })
   eleventyConfig.addFilter('monthYear', function (value) {
-    return date = new Date(value).toLocaleDateString(undefined, {month: 'long', year:'numeric'});
+    return (date = new Date(value).toLocaleDateString(undefined, {
+      month: 'long',
+      year: 'numeric',
+    }))
   })
 
-  eleventyConfig.addCollection("things", collection => {
-    return [...collection.getFilteredByGlob(["src/content/journal/*.md","src/content/intro.md","src/content/talks/*.md", "src/content/demos/*.md"])]
+  eleventyConfig.addCollection('things', (collection) => {
+    return [
+      ...collection.getFilteredByGlob([
+        'src/content/journal/*.md',
+        'src/content/intro.md',
+        'src/content/talks/*.md',
+        'src/content/demos/*.md',
+        'src/content/mails/*.md',
+      ]),
+    ]
   })
 
-  
-  eleventyConfig.addCollection("demos", collection => {
-    return [...collection.getFilteredByGlob("src/content/demos/*.md")]
+  eleventyConfig.addCollection('mails', (collection) => {
+    return [...collection.getFilteredByGlob('src/content/mails/**.md')]
   })
-  eleventyConfig.addCollection("talks", collection => {
-    return [...collection.getFilteredByGlob("src/content/talks/*.md")]
+  eleventyConfig.addCollection('apropos', (collection) => {
+    return [...collection.getFilteredByGlob('src/content/apropos.fr.md')]
+  })
+  eleventyConfig.addCollection('demos', (collection) => {
+    return [...collection.getFilteredByGlob('src/content/sequences/demos/*.md')]
+  })
+  eleventyConfig.addCollection('talks', (collection) => {
+    return [...collection.getFilteredByGlob('src/content/sequences/talks/*.md')]
+  })
+  eleventyConfig.addCollection('dialogues', (collection) => {
+    return [
+      ...collection.getFilteredByGlob('src/content/sequences/dialogues/*.md'),
+    ]
   })
 
-  eleventyConfig.addCollection("dialogues", collection => {
-    return [...collection.getFilteredByGlob("src/content/dialogues/*.md")]
+  eleventyConfig.addCollection('sequences', (collection) => {
+    return [...collection.getFilteredByGlob('src/content/sequences/**/*.md')]
   })
-  eleventyConfig.addCollection("posts", collection => {
-    collection = collection.getFilteredByGlob("src/content/posts/**/*.md");
-    collection.forEach(el => {
-
-      // add macros on the fly to the collection
-    
-      el.template.inputContent = el.template.inputContent.replace('---\n\n', `---\n\n${filters}\n`)
-      el.template.frontMatter.content = `${filters}\n${el.template.frontMatter.content}`
-    })
-
-    return collection;
-  });
-
-
 
   // folder structures
   // -----------------------------------------------------------------------------
@@ -83,17 +99,16 @@ module.exports = function (eleventyConfig) {
   // -----------------------------------------------------------------------------
   return {
     // run the md through the njk engine first to use macro
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: 'njk',
     dir: {
-      input: "src",
-      output: "public",
-      includes: "layouts",
-      data: "data",
+      input: 'src',
+      output: 'public',
+      includes: 'layouts',
+      data: 'data',
     },
-  };
-};
-
+  }
+}
 
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min)) + min
 }

@@ -15,8 +15,10 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@sindresorhus/slugify": "^1.1.2",
+    "js-yaml": "^4.1.0",
     "katex": "^0.16.2",
     "markdown-it": "^12.3.2",
+    "markdown-it-anchor": "^8.6.5",
     "markdown-it-attrs": "^4.1.4",
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-classy": "^0.2.0",

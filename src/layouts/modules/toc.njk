@@ -1,0 +1,12 @@
+
+<aside class="toc">
+<nav>
+<ul>
+{% for item in collections.sequences %}
+{% if not item.data.order == "" %}
+  <li class="toc-{{item.data.type}}"><a href="#{{item.data.title | slugify}}">{% include "../icons/iconTalk.njk" %}<span>{{item.data.title}}</span></a></li> 
+{% endif %}
+{% endfor %}
+</ul>
+</nav>
+</aside>

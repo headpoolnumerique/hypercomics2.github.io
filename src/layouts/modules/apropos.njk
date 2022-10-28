@@ -1,0 +1,15 @@
+
+<section class="metatext" id="apropos">
+
+  <a class="close" href="#!">close</a>
+
+
+{% for apropos in collections.apropos %}
+  
+  <h2>{{apropos.data.title}}</h2>
+  {{apropos.templateContent | safe}}
+
+{% endfor %}
+
+  <img class="head-logo" src="/images/logo-head.png" alt="">
+</section>
