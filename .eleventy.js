@@ -1,3 +1,4 @@
+const config = require('./src/data/config.json');
 const slugify = require('slugify')
 const flaxaudio = require('./flaxaudio/') // For local development
 const classy = require('markdown-it-classy')
@@ -7,8 +8,10 @@ const markdownItPandoc = require('markdown-it-pandoc')
 const yaml = require('js-yaml')
 module.exports = function (eleventyConfig) {
 
-  // add class to the MD
 
+
+  // change path on up
+  const isProduction = process.env.NODE_ENV === `production`;
 
   eleventyConfig.addPassthroughCopy({ 'static/css': '/css' })
   eleventyConfig.addPassthroughCopy({ 'static/fonts': '/fonts' })
@@ -100,6 +103,7 @@ module.exports = function (eleventyConfig) {
   return {
     // run the md through the njk engine first to use macro
     markdownTemplateEngine: 'njk',
+    pathPrefix: isProduction ?  config.urlprefix : ``,
     dir: {
       input: 'src',
       output: 'public',

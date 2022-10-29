@@ -1,32 +1,45 @@
 {% extends "base.njk" %}
-{% block headerSup %}
-    <link rel="stylesheet" type="text/css" href="/css/green-audio-player.css">
-    <script src="/js/green-audio-player.js"></script>
-{% endblock headerSup %}
-{% block menu %}
-    {% include "./modules/menu.njk" %}
-    {% include "./modules/toc.njk" %}
-{% endblock %}
-{% block content %}
-    {% for sequence in collections.sequences  %}
-        {% if not sequence.data.order == "" %}
-            {% if sequence.data.type == "chat" %}
-                {% include "./modules/chat.njk" %}
-            {% elif sequence.data.type == "demo" %}
-                {% include "./modules/demo.njk" %}
-            {% elif sequence.data.type == "mail" %}
-                {% include "./modules/mail.njk" %}
-            {% elif sequence.data.type == "talk" %}
-                {% include "./modules/talk.njk" %}
-            {% else %}
-                {{ sequence.templateContent | safe }}
+
+    {% block headerSup %}
+        <link rel="stylesheet"
+              type="text/css"
+              href="{{ "/css/green-audio-player.css" | url }}">
+        <script src="{{  "/js/green-audio-player.js"  | url }}"></script>
+    {% endblock headerSup %}
+
+    {% block menu %}
+        {% include "./modules/menu.njk" %}
+        {% include "./modules/toc.njk" %}
+    {% endblock %}
+
+    {% block content %}
+        {% for sequence in collections.sequences  %}
+            {% if not sequence.data.order == "" %}
+
+                {% if sequence.data.type == "chat" %}
+                    {% include "./modules/chat.njk" %}
+
+                {% elif sequence.data.type == "demo" %}
+                    {% include "./modules/demo.njk" %}
+
+                {% elif sequence.data.type == "mail" %}
+                    {% include "./modules/mail.njk" %}
+
+                {% elif sequence.data.type == "talk" %}
+                    {% include "./modules/talk.njk" %}
+
+                {% else %}
+                    {{ sequence.templateContent | safe }}
+                {% endif %}
+
             {% endif %}
-        {% endif %}
-    {% endfor %}
-{% endblock content %}
-{% block footer %}
-{% endblock footer %}
-{% block endscripts %}
+        {% endfor %}
+    {% endblock content %}
+
+    {% block footer %}
+    {% endblock footer %}
+
+    {% block endscripts %}
     <script> GreenAudioPlayer.init({
         selector: '.audioplayer', // inits Green Audio Player on each audio container that has class "player"
         stopOthersOnPlay: true

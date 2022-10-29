@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>{{meta.title}}</title>
-      <script src="js/index.js" type="module"></script>
-      <link rel="stylesheet" href="css/main.css">
-      {% block headerSup %}
-              
-      {% endblock headerSup %}
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{meta.title}}</title>
+  <script src="{{ "/js/index.js" | url }}" type="module"></script>
+  <link rel="stylesheet" href="{{ "/css/main.css" | url }}">
+  {% block headerSup %}
 
-    <body class="{{class}}">
-      {% block apropos %}
-         {% include "./modules/apropos.njk" %} 
-      {% endblock apropos %}
+  {% endblock headerSup %}
+</head>
 
-      {% block supmenu %}
-        <section class="submenu">
-          <li><a href="#apropos">À propos</a></li>
-        </section>
-      {% endblock supmenu %}
+<body class="{{class}}">
+  {% block apropos %}
+  {% include "./modules/apropos.njk" %}
+  {% endblock apropos %}
 
-
-      {% if site.logo.image %}
-        <img src="{{"/images/" | url}}{{site.logo.image}}" alt="{{site.logo.alt}}" class="logo"> 
-      {% else %}
-         <h1>{{title}}</h1>
-      {% endif %}
-
-      <section class="intro">
-        {% for apropos in collections.apropos %}
-          {{apropos.templateContent | safe}}
-        {% endfor %}
-      </section>
-    
-      {% block menu %}
-        {% include "modules/menu.njk" %}
-      {% endblock %}
-        
-     
-      {% block content %}
-        
-      {% endblock content %}
+  {% block supmenu %}
+  <section class="submenu">
+    <li><a href="#apropos">À propos</a></li>
+  </section>
+  {% endblock supmenu %}
 
 
-      {% block footer %}
-      <footer>ci-gît le footer</footer>
-      {% endblock %}
+  {% if site.logo.image %}
+  <img src="{{" /images/" | url}}{{site.logo.image}}" alt="{{site.logo.alt}}" class="logo">
+  {% else %}
+  <h1>{{title}}</h1>
+  {% endif %}
 
-      {% block endscripts %}
-              
-      {% endblock endscripts %}
-    </body>
+  <section class="intro">
+    {% for apropos in collections.apropos %}
+    {{apropos.templateContent | safe}}
+    {% endfor %}
+  </section>
+
+  {% block menu %}
+  {% include "modules/menu.njk" %}
+  {% endblock %}
 
 
+  {% block content %}
+
+  {% endblock content %}
+
+
+  {% block footer %}
+  <footer>ci-gît le footer</footer>
+  {% endblock %}
+
+  {% block endscripts %}
+
+  {% endblock endscripts %}
+</body>

@@ -3,12 +3,17 @@
  * This shortCode allow calling the data from another collection using the id,
  * to be transformed as a figure with figcaption.
  */
+ 
+
+
+const config = require('../src/data/config.json')
 
 const imgUrl = "/images/";
 
 const slugify = require('slugify');
 const markdownIt = require("markdown-it");
 const markdownItPandoc = require("markdown-it-pandoc");
+
 
 options = {
   html: true, // Enable HTML tags in source
