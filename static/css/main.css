@@ -23,6 +23,11 @@ body {
   font-size: 20px;
   padding-bottom: 30em;
 }
+
+* * {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -346,8 +351,17 @@ iframe:hover {
 }
 .toc {
   left: 20px;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 3000;
+  color: var(--color-clem);
 }
 .toc svg {
   width: 40px;
@@ -448,15 +462,18 @@ footer {
 }
 
 .talk .screenshot {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   position: relative;
   display: block;
+  border: 2px solid black;
+  margin-left: -4em;
+  margin-right: 2em;
 }
 .talk .screenshot::after {
   content: "";
   position: absolute;
-  right: -120px;
+  right: -80px;
   background: radial-gradient(
     circle,
     rgba(10, 10, 10, 1) 0%,
@@ -479,15 +496,18 @@ footer {
     rgba(10, 10, 10, 1) 100%
   );
   border-radius: 50%;
-  width: 290px;
-  height: 290px;
-  top: 10px;
+  width: 90%;
+  height: 90%;
+  top: 4px;
   z-index: -1;
 }
 
+.talk {
+  display:block;
+}
 
 .talk .audioplayer.active {
-  position:fixed;
+  position: fixed;
   bottom: 0;
   background: white;
   width: 100%;
@@ -501,23 +521,33 @@ footer {
 .talk .audioplayer.active::before {
   content: attr(data-caption);
   position: absolute;
-  top: -.8em;
+  top: -0.8em;
   font-style: italic;
   padding-top: 0.2em;
-  width:100%;
-  left:0;
+  width: 100%;
+  left: 0;
   text-align: center;
   background: black;
   color: white;
 }
 
 .talk {
-  gap: 3em;
+  gap: 1em;
   margin: 10em auto;
-  width: clamp(300px, 75vw, 800px);
-  display: grid;
-  grid-template-columns: [intro] 1fr [disc-start] 1fr [disc-end];
+  width: clamp(300px, 45vw, 700px);
+  /* display: grid; */
+  /* grid-template-columns: [intro] 1fr [disc-start] 1fr [disc-end]; */
 }
+.talk img  {
+  display: block;
+  float: left;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
 .talk .date {
+  grid-row: 1;
   grid-column: 1 / -1;
 }
+
+.talk 

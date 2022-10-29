@@ -2,15 +2,15 @@
     <h4 class="date">
         <date>{{ sequence.data.date | ladate }}</date>
     </h4>
+    <a target="_blank" class="screenshot" href="{{ sequence.data.website }}">
+        <img class="audiocover" src="/images/{{ sequence.data.image }}" />
+    </a>
     <section>
         <header>
             <h2>{{ sequence.data.title }}</h2>
             <p>{{ sequence.data.website }}</p>
         </header>
         {{ sequence.templateContent | safe }}
-    {% include "./audioplayer.njk" %}
+            {% include "./audioplayer.njk" %}
     </section>
-    <a target="_blank" class="screenshot" href="{{ sequence.data.website }}">
-        <img class="audiocover" src="/images/{{ sequence.data.image }}" />
-    </a>
 </section>
