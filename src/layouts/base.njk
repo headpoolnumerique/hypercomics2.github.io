@@ -24,9 +24,8 @@
   </section>
   {% endblock supmenu %}
 
-
   {% if site.logo.image %}
-  <img src="{{" /images/" | url}}{{site.logo.image}}" alt="{{site.logo.alt}}" class="logo">
+  <img src="{{ "/images/" | url}}{{site.logo.image}}" alt="{{site.logo.alt}}" class="logo">
   {% else %}
   <h1>{{title}}</h1>
   {% endif %}

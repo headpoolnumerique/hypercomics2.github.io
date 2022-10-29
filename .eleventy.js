@@ -103,7 +103,7 @@ module.exports = function (eleventyConfig) {
   return {
     // run the md through the njk engine first to use macro
     markdownTemplateEngine: 'njk',
-    pathPrefix: isProduction ?  config.urlprefix : ``,
+    pathPrefix: isProduction ? config.prefix : ``,
     dir: {
       input: 'src',
       output: 'public',

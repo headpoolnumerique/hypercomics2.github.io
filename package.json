@@ -1,9 +1,9 @@
 {
-  "name": "content",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "homepage": "https://headpoolnumerique/.github.io/hypercomics.org",
+  "name": "hypercomics2",
+  "version": "0.0.1",
+  "description": "the website for hypercomics",
+  "main": ".eleventy.js",
+  "homepage": "https://headpoolnumerique.github.io/hypercomics2.org",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "cross-env NODE_ENV=development eleventy --serve",
