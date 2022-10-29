@@ -18,7 +18,7 @@
     </aside>
     <section class="wrapperdemo">
         <div class="pause screenshot resizer"
-             style="--frame-back: url(/images/{{ sequence.data.id }}-screenshot.png)"
+        style="--frame-back: url({{ "/images/" | url}}{{ sequence.data.id }}-screenshot.png)"
              id="{{ sequence.data.id | slugify }}">
             <iframe loading="lazy"
                     data-url="{{ sequence.data.urldemo }}"

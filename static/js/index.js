@@ -29,6 +29,7 @@ const screenshotObserver = new ResizeObserver((screenshots) => {
   }
 });
 
+
 screens.forEach((screen) => {
   console.log(screen);
   screenshotObserver.observe(screen);
@@ -48,7 +49,7 @@ screens.forEach((screen) => {
 //   }
 // });
 
-window.addEventListener("hashchange", function () {
+window.addEventListener("hashchange", function() {
   if (document.querySelector(".active")) {
     document.querySelector(".active").classList.remove("active");
   }
@@ -61,7 +62,7 @@ window.addEventListener("hashchange", function () {
 let resizerButtons = document.querySelectorAll("button");
 
 resizerButtons.forEach((button) => {
-  button.addEventListener("click", function () {
+  button.addEventListener("click", function() {
     const target = document.querySelector(this.dataset.target);
     switch (this.className) {
       case "portrait":
@@ -93,7 +94,7 @@ resizerButtons.forEach((button) => {
 //Pause the iframe (for memory)
 
 document.querySelectorAll(".screenshot").forEach((frame) => {
-  frame.addEventListener("click", function () {
+  frame.addEventListener("click", function() {
     if (frame.classList.contains("play")) {
       frame.classList.add("pause");
       frame.classList.remove("play");
@@ -109,7 +110,7 @@ document.querySelectorAll(".screenshot").forEach((frame) => {
 });
 
 document.querySelectorAll(".audioplayer").forEach((listen) => {
-  listen.addEventListener("click", function () {
+  listen.addEventListener("click", function() {
     if (this.classList.contains("active")) {
       return;
     }

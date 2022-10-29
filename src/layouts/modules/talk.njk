@@ -3,7 +3,7 @@
         <date>{{ sequence.data.date | ladate }}</date>
     </h4>
     <a target="_blank" class="screenshot" href="{{ sequence.data.website }}">
-        <img class="audiocover" src="/images/{{ sequence.data.image }}" />
+        <img class="audiocover" src="{{ "/images/"  | url }}{{ sequence.data.image }}" />
     </a>
     <section>
         <header>
