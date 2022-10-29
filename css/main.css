@@ -23,7 +23,6 @@ body {
   font-size: 20px;
   padding-bottom: 30em;
 }
-
 * * {
   box-sizing: border-box;
 }
@@ -503,7 +502,7 @@ footer {
 }
 
 .talk {
-  display:block;
+  display: block;
 }
 
 .talk .audioplayer.active {
@@ -538,7 +537,7 @@ footer {
   /* display: grid; */
   /* grid-template-columns: [intro] 1fr [disc-start] 1fr [disc-end]; */
 }
-.talk img  {
+.talk img {
   display: block;
   float: left;
   margin-right: 2em;
@@ -550,4 +549,4 @@ footer {
   grid-column: 1 / -1;
 }
 
-.talk 
+.talk;
