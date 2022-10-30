@@ -10,5 +10,5 @@
         </header>
         {{ sequence.templateContent | safe }}
     </section>
-    <img class="mail-author" src="/images/{{sequence.data.writerid}}_ordi.png" />
+    <img class="mail-author" src="{{ "/images/" | url}}{{sequence.data.writerid}}_ordi.png" />
 </article>
