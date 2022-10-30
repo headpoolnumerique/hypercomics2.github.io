@@ -1,11 +1,11 @@
 @import url(fonts.css);
 
 :root {
-  --font-comics: "cabinet grotesk";
-  --font-sans: "Spline Sans Mono";
+  --font-comics: 'cabinet grotesk';
+  --font-sans: 'Spline Sans Mono';
   --font-serif: serif;
-  --font-mono: "Compagnon";
-  --font-big: "tanker";
+  --font-mono: 'Compagnon';
+  --font-big: 'tanker';
   --color-text: #2f1e2d;
   --color-accent: grey;
   --color-grey: #ccc;
@@ -317,7 +317,7 @@ a:hover {
 }
 
 .demo .screenshot::after {
-  content: attr(data-width) "px × " attr(data-height) "px";
+  content: attr(data-width) 'px × ' attr(data-height) 'px';
   text-align: right;
   margin: 1em auto;
   text-align: center;
@@ -470,7 +470,7 @@ footer {
   margin-right: 2em;
 }
 .talk .screenshot::after {
-  content: "";
+  content: '';
   position: absolute;
   right: -80px;
   background: radial-gradient(
