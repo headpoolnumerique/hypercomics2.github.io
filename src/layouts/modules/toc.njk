@@ -2,9 +2,29 @@
 <aside class="toc">
 <nav>
 <ul>
-{% for item in collections.sequences %}
-{% if not item.data.order == "" %}
-  <li class="toc-{{item.data.type}}"><a href="#{{item.data.title | slugify}}">{% include "../icons/iconTalk.njk" %}<span>{{item.data.title}}</span></a></li> 
+{% for sequence in collections.sequences %}
+{% if not sequence.data.order == "" %}
+
+            {% if not sequence.data.order == "" %}
+
+                {% if sequence.data.type == "chat" %}
+  <li class="toc-{{item.data.type}}"><a href="#{{sequence.data.title | slugify}}">{% include "../icons/iconTalk.njk" %}<span>{{sequence.data.title}}</span></a></li> 
+  
+
+                {% elif sequence.data.type == "demo" %}
+  <li class="toc-{{item.data.type}}"><a href="#{{sequence.data.title | slugify}}">{% include "../icons/sequences.njk" %}<span>{{sequence.data.title}}</span></a></li> 
+ 
+
+                {% elif sequence.data.type == "mail" %}
+  <li class="toc-{{item.data.type}}"><a href="#{{sequence.data.title | slugify}}">{% include "../icons/iconText.njk" %}<span>{{sequence.data.title}}</span></a></li> 
+
+
+                {% elif sequence.data.type == "talk" %}
+  <li class="toc-{{item.data.type}}"><a href="#{{sequence.data.title | slugify}}">{% include "../icons/iconTalk.njk" %}<span>{{sequence.data.title}}</span></a></li> 
+
+                {% endif %}
+
+            {% endif %}
 {% endif %}
 {% endfor %}
 </ul>
