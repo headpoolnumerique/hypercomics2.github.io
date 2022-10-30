@@ -1,6 +1,6 @@
 @font-face {
   font-family: "cabinet grotesk";
-  src: url("/fonts/CabinetGrotesk-Variable.woff2") format("truetype");
+  src: url("../fonts/CabinetGrotesk-Variable.woff2") format("truetype");
   font-weight: 400 ;
   font-display: swap;
   font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "tanker";
-  src: url("/fonts/Tanker-Regular.woff2") format("truetype");
+  src: url("../fonts/Tanker-Regular.woff2") format("truetype");
   font-weight: 400 ;
   font-display: swap;
   font-style: normal;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Spline Sans Mono";
-  src: url("/fonts/SplineSansMono-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/SplineSansMono-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: "Spline Sans Mono";
-  src: url("/fonts/SplineSansMono-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/SplineSansMono-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: "Compagnon";
-  src: url("/fonts/Compagnon-Roman.woff2") format("truetype");
+  src: url("../fonts/Compagnon-Roman.woff2") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -42,7 +42,7 @@
 
 @font-face {
   font-family: "Compagnon";
-  src: url("/fonts/Compagnon-Light.woff2") format("truetype");
+  src: url("../fonts/Compagnon-Light.woff2") format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
@@ -50,7 +50,7 @@
 
 @font-face {
   font-family: "Compagnon";
-  src: url("/fonts/Compagnon-Italic.woff2") format("truetype");
+  src: url("../fonts/Compagnon-Italic.woff2") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: italic;
@@ -58,7 +58,7 @@
 
 @font-face {
   font-family: "Compagnon";
-  src: url("/fonts/Compagnon-Bold.woff2") format("truetype");
+  src: url("../fonts/Compagnon-Bold.woff2") format("truetype");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -66,7 +66,7 @@
 
 @font-face {
   font-family: "Compagnon";
-  src: url("/fonts/Compagnon-Medium.woff2") format("truetype");
+  src: url("../fonts/Compagnon-Medium.woff2") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
