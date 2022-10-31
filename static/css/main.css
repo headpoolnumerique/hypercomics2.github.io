@@ -26,7 +26,6 @@ body {
 * * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -458,6 +457,7 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
+  background-color: black;
 }
 
 .talk .screenshot {
@@ -553,9 +553,44 @@ footer {
   display: none;
 }
 .listening em {
-  color:var(--color-primary);
+  color: var(--color-primary);
 }
 .active + .listening {
   display: block;
   font-size: 1em;
+}
+
+.section-wrapper .dialog {
+  /* transition: 1000ms all ease-out; */
+  visibility: hidden;
+  transition: all 1000ms ease-out;
+}
+
+.section-wrapper .shown {
+  animation: 120ms fadeIn;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.observationObsMan {
+  z-index: -2;
+  inset: 3vh 0;
+  position: fixed;
+}
+
+.activated svg {
+  transition: all 10ms;
+  fill: var(--color-primary);
+  width: 60px;
+}
+
+section {
+scroll-snap-type: y mandatory;
 }
