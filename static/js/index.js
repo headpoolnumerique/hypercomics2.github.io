@@ -140,6 +140,30 @@ window.onload = () => {
     }
   )
 
+  let demoObserver = new IntersectionObserver((observables) => {
+    for (let observable of observables) {
+      console.log(observable)
+      if (observable.intersectionRatio > 0.2) {
+        if (observable.target.querySelector('iframe')) {
+          observable.target.classList.add('play')
+          observable.target.classList.remove('pause')
+          observable.target.querySelector('iframe').src =
+            observable.target.querySelector('iframe').dataset.url
+        }
+      } else {
+        if (observable.target.querySelector('iframe')) {
+          observable.target.querySelector('iframe').src = ''
+          observable.target.classList.add('pause')
+          observable.target.classList.remove('play')
+        }
+      }
+    }
+  },
+    {
+      threshold: [0.2],
+    }
+)
+
   let tocObserver = new IntersectionObserver(
     (observables) => {
       for (let observable of observables) {
@@ -158,6 +182,11 @@ window.onload = () => {
 
   const dialogs = document.querySelectorAll('.dialog')
   const sections = document.querySelectorAll('section,article')
+  const demos = document.querySelectorAll('.screenshot')
+
+  for (let demo of demos) {
+    demoObserver.observe(demo)
+  }
 
   for (let dialog of dialogs) {
     dialogObserver.observe(dialog)
