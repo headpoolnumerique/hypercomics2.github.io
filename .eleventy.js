@@ -107,7 +107,7 @@ module.exports = function (eleventyConfig) {
     pathPrefix: isProduction ? config.prefix : ``,
     dir: {
       input: 'src',
-      output: 'public',
+      output: 'docs',
       includes: 'layouts',
       data: 'data',
     },
