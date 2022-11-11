@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'static/images': '/images' })
   eleventyConfig.addPassthroughCopy({ 'static/videos': '/videos' })
   eleventyConfig.addPassthroughCopy({ 'static/audio': '/audio' })
+  eleventyConfig.addPassthroughCopy({ 'static/admin': '/admin' })
 
   let filters = `{% import "macros.njk" as macro with context %}`
 

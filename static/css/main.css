@@ -2,6 +2,7 @@
 
 :root {
   --font-comics: 'cabinet grotesk';
+  --font-comics: 'clemgrotest';
   --font-sans: 'Spline Sans Mono';
   --font-serif: serif;
   --font-mono: 'Compagnon';
@@ -118,6 +119,32 @@ h1::after {
 
 /*dialog*/
 
+.dialogue > p {
+  width: fit-content;
+  max-width: 70ch;
+  text-align: center;
+  background: lightgrey;
+  margin: 0 auto;
+  padding: 0 4ch;
+}
+
+.dialogue > figure {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: fit-content;
+  gap: 5ch;
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 4em 4ch;
+}
+.dialogue > figure img {
+  grid-template-columns: 2;
+}
+.dialogue > figure figcaption {
+  margin-top: 1em;
+  grid-column: 2;
+}
+
 .dialog {
   --portrait: 40px;
   display: grid;
@@ -130,6 +157,7 @@ h1::after {
   position: relative;
   gap: 0 2ch;
   margin-bottom: 3em;
+  font-weight: 900;
 }
 
 .dialog .content {
@@ -592,5 +620,5 @@ footer {
 }
 
 section {
-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }

@@ -11,7 +11,7 @@
 {% endblock %}
 {% block content %}
     <div class="observationObsMan"></div>
-    <div class="section-wrapper">
+    <div class="section-wrapper" class="{{sequence.data.type}}">
         {% for sequence in collections.sequences  %}
             {% if not sequence.data.order == "" %}
                 {% if sequence.data.type == "chat" %}
