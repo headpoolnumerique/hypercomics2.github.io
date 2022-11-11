@@ -1,0 +1,144 @@
+backend:
+  name: github
+  branch: main
+  repo: headpoolnumerique/hypercomics2.org
+  auth_type: pkce # Required for implicit grant
+  app_id: # Application ID from your GitLab settings
+  auth_endpoint: auth
+local_backend: true # for local update
+# publish_mode: editorial_workflow #remove editorial workflow as its in beta for gitlab
+media_folder: "static/images" # Media files will be stored in the repo under images/uploads
+public_folder: "/images" # where the images will be called from
+collections:
+  - name: "site meta"
+    label: "Site config"
+    files: 
+      - label: "Site data"
+        name: "metadata"
+        file: "/src/data/site.yaml"
+        fields:
+          - {label: "Auteur", name: "author", widget: "string"}    
+          - {label: "Title", name: "title", widget: "string"}    
+  - name: "entretiens" 
+    label: "Entretiens"
+    identifier_field: "title"
+    folder: "/src/content/sequences/talks/"
+    extension: "md"
+    slug: "{{title}}"
+    create: true
+    description: "Les entretiens audio arrivent ici."
+    fields:
+      - label: "Titre" 
+        name: "title" 
+        widget: "string"
+      - label: "Date (AAAA-MM-JJ)" 
+        name: "date" 
+        widget: "string"
+      - label: "fichier audio" 
+        required: false
+        name: "file"
+        widget: "file"
+        media_library: 
+          config: 
+            multiple: false
+      - label: "image"
+        name: "image"
+        widget: "file"
+        required: false
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        default: "talk"
+      - label: "ordre"
+        name: "order"
+        widget: "number"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+  - name: "mails" 
+    label: "mails"
+    identifier_field: "title"
+    folder: "/src/content/sequences/mails/"
+    extension: "md"
+    slug: "{{title}}"
+    create: true
+    description: "Les emails, ou les moments devant les ordi arrivent ici."
+    fields:
+      - label: "Titre" 
+        name: "title" 
+        widget: "string"
+      - label: "auteur" 
+        name: "author" 
+        widget: "string"
+      - label: "writerid" 
+        name: "writerid" 
+        widget: "string"
+      - label: "Date (AAAA-MM-JJ)" 
+        name: "date" 
+        widget: "string"
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        default: "mail"
+      - label: "ordre"
+        name: "order"
+        widget: "number"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "chat" 
+    label: "chat"
+    identifier_field: "title"
+    folder: "/src/content/sequences/dialogues/"
+    extension: "md"
+    slug: "{{title}}"
+    create: true
+    description: "Les dialogues entre nous"
+    fields:
+      - label: "Titre" 
+        name: "title" 
+        widget: "string"
+      - label: "Date (AAAA-MM-JJ)" 
+        name: "date" 
+        widget: "string"
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        default: "chat"
+      - label: "ordre"
+        name: "order"
+        widget: "number"
+      - label: "Body"
+        name: "body"
+        required: false
+        widget: "markdown"
+  - name: "Prototype" 
+    label: "demo"
+    identifier_field: "title"
+    folder: "/src/content/sequences/demos/"
+    extension: "md"
+    slug: "{{title}}"
+    create: true
+    description: "Les demos et proto"
+    fields:
+      - label: "Titre" 
+        name: "title" 
+        widget: "string"
+      - label: "Date (AAAA-MM-JJ)" 
+        name: "date" 
+        widget: "string"
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        default: "demo"
+      - label: "ordre"
+        name: "order"
+        widget: "number"
+      - label: "url pour la démo"
+        name: "urldemo"
+        widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
