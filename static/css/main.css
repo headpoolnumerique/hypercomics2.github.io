@@ -148,10 +148,11 @@ h1::after {
 .dialog {
   --portrait: 40px;
   display: grid;
-  grid-template-columns: [juface] var(--portrait) [ju] 1fr [overlap] 2fr [clem] 1fr [clemface] var(
+  grid-template-columns: [clemface] var(--portrait) [clem] 1fr [overlap] 2fr [ju] 1fr [juface] var(
       --portrait
     );
   grid-template-rows: [text] auto [portrait-start] auto [portrait-end];
+
   width: clamp(300px, 75vw, 800px);
   margin: 0 auto;
   position: relative;
@@ -178,11 +179,11 @@ h1::after {
 }
 
 .ju .content {
-  grid-column: ju / clem;
+  grid-column: overlap / juface;
 }
 
 .clem .content {
-  grid-column: overlap / clemface;
+  grid-column: clem / ju;
 }
 
 /*portrait*/
@@ -195,7 +196,7 @@ h1::after {
   margin-top: 2em;
   grid-row: 1 / -1;
   align-self: end;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
 }
 
 .ju .face {
@@ -220,16 +221,16 @@ h1::after {
   stroke-width: 0.5;
 }
 .ju .dialoglines {
-  grid-column: ju / clem;
+  grid-column: overlap / juface;
 }
-.ju .dialoglines .right {
+.ju .dialoglines .left {
   display: none;
 }
 .clem .dialoglines {
-  grid-column: overlap / clemface;
+  grid-column: clem / ju;
 }
 
-.clem .dialoglines .left {
+.clem .dialoglines .right {
   display: none;
 }
 .onomatop .content {
@@ -430,7 +431,7 @@ footer {
 .mail {
   --portrait: 200px;
   display: grid;
-  grid-template-columns: [juface] var(--portrait) [ju] 1fr [overlap] 2fr [clem] 1fr [clemface] var(
+  grid-template-columns: [clemface] var(--portrait) [clem] 1fr [overlap] 2fr [ju] 1fr [juface] var(
       --portrait
     );
   width: clamp(270px, 70vw, 1000px);
@@ -471,8 +472,15 @@ footer {
   background-attachment: scroll;
 }
 .mail.clem section {
-  grid-column: ju / -1;
+  grid-column: clem / -1;
 }
+.mail.ju section {
+  grid-column: 1 / juface;
+}
+.mail.ju > img {
+  grid-column: juface;
+}
+
 .mail h2 {
   font-size: 3em;
 }
