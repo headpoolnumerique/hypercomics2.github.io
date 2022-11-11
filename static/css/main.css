@@ -2,7 +2,7 @@
 
 :root {
   --font-comics: 'cabinet grotesk';
-  --font-comics: 'clemgrotest';
+  --font-comics: 'clemgrotest', 'cabinet grotesk', 'cursive';
   --font-sans: 'Spline Sans Mono';
   --font-serif: serif;
   --font-mono: 'Compagnon';
