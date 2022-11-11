@@ -2,10 +2,8 @@ backend:
   name: github
   branch: main
   repo: headpoolnumerique/hypercomics2.org
-  auth_type: pkce # Required for implicit grant
-  app_id: # Application ID from your GitLab settings
   auth_endpoint: auth
-local_backend: true # for local update
+# local_backend: true # for local update
 # publish_mode: editorial_workflow #remove editorial workflow as its in beta for gitlab
 media_folder: "static/images" # Media files will be stored in the repo under images/uploads
 public_folder: "/images" # where the images will be called from
