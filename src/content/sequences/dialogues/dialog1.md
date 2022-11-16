@@ -250,4 +250,60 @@ Et y intégrer les différentes expérimentations qui viennent entre les discuss
 
 Yes\
 \
+{% enddialog %}\
+\
+{% dialog "Ju" %}
+
+Je laisse ça là \
+(https://voussoir.net/writing/browser_in_the_dark)\
+Parce que ça peut aussi être très marrant les messages codés 
+
+{% enddialog %}\
+\
+{% dialog "clem" %}
+
+??\
+\
+{% enddialog %}\
+\
+{% ladate "2022-04-16" %}\
+\
+{% dialog "Ju" %}
+
+Hop ! \
+HyperComics day c’est parti !
+Et Figma qui plante 3000 depuis sa mise à jour, tout va bien !
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}
+
+Heu.. je trouve pas de camion sur le Figma. 
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}
+
+Ha si j’ai les camions !\
+La séquence 1 c’est le premier fichier que tu m’avais envoyé ? 
+
+{% enddialog %}\
+\
+{% dialog "clem" %}
+
+Oui mais c'était juste des captures d'écran 
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}
+
+Ils sont bien là 
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}
+
+Bon faut qu’on trouve un moyen de sortir les contenus de Figma autrement
+J’ai passé la journée à essayer de faire propre 
+
 {% enddialog %}
