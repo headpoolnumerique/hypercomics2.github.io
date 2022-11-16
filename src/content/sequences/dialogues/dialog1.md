@@ -97,7 +97,8 @@ J’ai fini à 19h30 avec un défilement rigolo, je mets en ligne et je te montr
 {% dialog "Ju" %}
 
 Regarde ça !\
-\[sailorhg.com](https://sailorhg.com/home_sweet_homepage/)
+\[sailorhg.com]\
+(https://sailorhg.com/home_sweet_homepage/)
 
 {% enddialog %}
 
