@@ -65,10 +65,13 @@ Cool !
 {% dialog "Ju" %}
 
 J’ai commencé à regarder le scroll et les animation (idle) et au click. 
+
 {% enddialog %}
 
 {% dialog "clem" %}
+
 Je pense que dans un premier temps on ira choper des effets à droite à gauche (fumée etc) 
+
 
 {% enddialog %}
 
@@ -96,8 +99,8 @@ J’ai fini à 19h30 avec un défilement rigolo, je mets en ligne et je te montr
 
 {% dialog "Ju" %}
 
-Regarde ça !\
-\[text du lien](https://sailorhg.com/home_sweet_homepage/)
+Regarde ça !
+[text du lien](https://sailorhg.com/home_sweet_homepage/)
 
 {% enddialog %}
 
@@ -111,110 +114,112 @@ Très cool sur le plan techno
 
 Oui c’est pas mal
 
+{% enddialog %}
+
 {% dialog "Ju" %}
 
 Je regardais pour voir ce système de scroll 
 
 {% enddialog %}
 
-{% ladate "2022-04-12" %}\
-\
+{% ladate "2022-04-12" %}
+
 {% dialog "Ju" %}
 
-Hypercomics.fr est up !\
-\
-J’ai passé le weekend dessus pour essayer de voir comment positionner les éléments et pour faire le lien entre le menu du bas et les sections \
-\
-{% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-Je mettrais les expérimentations sur le site aussi et des liens pour aller les essayer\
-\
- {% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-Site en ligne ! \
-Il va être de mieux en mieux \
-\
-Ça m’a permis de pointer plein de trucs qui vont pas pour la sortie \
-\
+Hypercomics.fr est up !
+
+J’ai passé le weekend dessus pour essayer de voir comment positionner les éléments et pour faire le lien entre le menu du bas et les sections 
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+Je mettrais les expérimentations sur le site aussi et des liens pour aller les essayer
+
+ {% enddialog %}
+
+{% dialog "Ju" %}
+
+Site en ligne ! 
+Il va être de mieux en mieux 
+
+Ça m’a permis de pointer plein de trucs qui vont pas pour la sortie 
+
 {% enddialog %}
 
 {% dialog "clem" %}
 
 Je voudrais vraiment pas être contrariant mais le site ne marche pas 
 
-{% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-Sur quoi? \
-http://hypercomics.org/\
-\
 {% enddialog %}
 
-{% dialog "Ju" %}\
-C’est pas un .fr, c’est un .org \
-\
-{% enddialog %}\
-\
-{% dialog "clem" %}\
-\
-Merveilleux !\
-\
-{% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-J’ai des détails à bouger et rajouter le scroll pour le mouvement aussi mais c’est un début qui peut marcher \
-\
-{% enddialog %}\
-\
-{% ladate "2022-04-14" %}\
-\
-{% dialog "clem" %}\
-\
-Hello, Je crois que la conversation avec Etienne Mineur fonctionne pas \
-\
-{% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-Bien vu\
-je vais regarder pourquoi \
-\
-{% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-On dirait qu’il trouve pas le fichier \
-\
-{% enddialog %}\
-\
-{% dialog "clem" %}\
-\
-Il mouline...\
-\
-{% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-Oui\
-\
-{% enddialog %}\
-\
-{% dialog "clem" %}\
-\
-C'est pas mal à écouter\
-\
-{% enddialog %}\
-\
-{% dialog "clem" %}\
-\
-Pour le moment on est meilleurs pour discourir que pour avancer le projet ;) \
-\
+{% dialog "Ju" %}
+
+Sur quoi? 
+http://hypercomics.org/
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+C’est pas un .fr, c’est un .org 
+
+{% enddialog %}
+
+{% dialog "clem" %}
+
+Merveilleux !
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+J’ai des détails à bouger et rajouter le scroll pour le mouvement aussi mais c’est un début qui peut marcher 
+
+{% enddialog %}
+
+{% ladate "2022-04-14" %}
+
+{% dialog "clem" %}
+
+Hello, Je crois que la conversation avec Etienne Mineur fonctionne pas 
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+Bien vu
+je vais regarder pourquoi 
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+On dirait qu’il trouve pas le fichier 
+
+{% enddialog %}
+
+{% dialog "clem" %}
+
+Il mouline...
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+Oui
+
+{% enddialog %}
+
+{% dialog "clem" %}
+
+C'est pas mal à écouter
+
+{% enddialog %}
+
+{% dialog "clem" %}
+
+Pour le moment on est meilleurs pour discourir que pour avancer le projet ;) 
+
 {% enddialog %}
 
 {% dialog "Ju" %}
@@ -222,21 +227,21 @@ Pour le moment on est meilleurs pour discourir que pour avancer le projet ;) \
 Je viens de faire 3 jours sur le site 
 J’ai trois jours de prévu ce weekend sans compter les les nuits ; )
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "clem" %}
 
-On met les noms entiers non ? \
-Yannis La Macchia \
-\
-{% enddialog %}\
-\
+On met les noms entiers non ? 
+Yannis La Macchia 
+
+{% enddialog %}
+
 {% dialog "Ju" %}
 
 Yep
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "Ju" %}
 
 Et écrire une vrai intro 
@@ -244,63 +249,63 @@ Et un colophon
 Et un vrai footer 
 Et y intégrer les différentes expérimentations qui viennent entre les discussions 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "clem" %}
 
-Yes\
-\
-{% enddialog %}\
-\
+Yes
+
+{% enddialog %}
+
 {% dialog "Ju" %}
 
-Je laisse ça là \
-(https://voussoir.net/writing/browser_in_the_dark)\
+Je laisse ça là 
+(https://voussoir.net/writing/browser_in_the_dark)
 Parce que ça peut aussi être très marrant les messages codés 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "clem" %}
 
-??\
-\
-{% enddialog %}\
-\
-{% ladate "2022-04-16" %}\
-\
+??
+
+{% enddialog %}
+
+{% ladate "2022-04-16" %}
+
 {% dialog "Ju" %}
 
-Hop ! \
+Hop ! 
 HyperComics day c’est parti !
 Et Figma qui plante 3000 depuis sa mise à jour, tout va bien !
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "Ju" %}
 
 Heu.. je trouve pas de camion sur le Figma. 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "Ju" %}
 
-Ha si j’ai les camions !\
+Ha si j’ai les camions !
 La séquence 1 c’est le premier fichier que tu m’avais envoyé ? 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "clem" %}
 
 Oui mais c'était juste des captures d'écran 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "Ju" %}
 
 Ils sont bien là 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "Ju" %}
 
 Bon faut qu’on trouve un moyen de sortir les contenus de Figma autrement
