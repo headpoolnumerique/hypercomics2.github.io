@@ -101,5 +101,3 @@ https://sailorhg.com/home_sweet_homepage/ \
 https://www.nrk.no/osloogviken/xl/tiktok-doesn_t-show-the-war-in-ukraine-to-russian-users-1.15921522?utm_source=hackernewsletter&utm_medium=email&utm_term=fav 
 
 {% enddialog %}
-
-{% dialog "clem" %}
