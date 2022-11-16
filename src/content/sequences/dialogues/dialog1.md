@@ -100,3 +100,50 @@ Regarde ça !\
 \[text du lien](https://sailorhg.com/home_sweet_homepage/)
 
 {% enddialog %}
+
+{% dialog "clem" %}
+
+Très cool sur le plan techno 
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+Oui c’est pas mal
+
+{% dialog "Ju" %}
+
+Je regardais pour voir ce système de scroll 
+
+{% enddialog %}
+
+{% ladate "2022-04-12" %}\
+\
+{% dialog "Ju" %}
+
+Hypercomics.fr est up !\
+\
+J’ai passé le weekend dessus pour essayer de voir comment positionner les éléments et pour faire le lien entre le menu du bas et les sections \
+\
+{% enddialog %}\
+\
+{% dialog "Ju" %}\
+\
+Je mettrais les expérimentations sur le site aussi et des liens pour aller les essayer\
+\
+ {% enddialog %}\
+\
+{% dialog "Ju" %}\
+\
+Site en ligne ! \
+Il va être de mieux en mieux \
+\
+Ça m’a permis de pointer plein de trucs qui vont pas pour la sortie \
+\
+{% enddialog %}
+
+{% dialog "clem" %}
+
+Je voudrais vraiment pas être contrariant mais le site ne marche pas 
+
+{% enddialog %}
