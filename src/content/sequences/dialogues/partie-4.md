@@ -169,3 +169,52 @@ Cool! \
 Je lutte avec cette histoire de scroll 
 
 {% enddialog %}
+
+{% dialog "antho",  "undefined"   %}
+
+undefined
+
+{% enddialog %}\
+\
+{% dialog "clem" , "fatigue" %}
+
+Anthony m'a laissé entendre qu'il allait bientôt nous demander des nouvelles ;) 
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}\
+\
+Ah ben j’espère bien\
+\
+Il est bien silencieux là \
+\
+{% enddialog %}
+
+{% dialog "clem" %}
+
+Moi j'apprends les rudiments du parralaxe 
+
+{% enddialog %}
+
+{% dialog "Ju" , "circonspect" %}
+
+Ça m’inquiète, mais allons y\
+\
+Parce que c’est un gros mot 
+
+{% enddialog %}\
+\
+{% dialog "Ju" , "intello" %}
+
+On est d’accord qu’à la fin du mois il faut qu’on ait les deux premières séquences? 
+
+{% enddialog %}
+
+
+{% dialog "clem",  "fatigue"   %}
+
+
+undefined
+
+
+{% enddialog %}
