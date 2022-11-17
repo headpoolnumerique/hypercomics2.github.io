@@ -124,4 +124,12 @@ Je cherche un exemple...
 
 Parce que je me rends compte qu’il manque d’onomatopées
 
-{% enddialog %}
+{% enddialog %}\
+\
+{% dialog "clem" %}
+
+Ola ! Point HyperComics domani? 
+
+{% enddialog %}\
+\
+{% ladate "2022-05-12" %}
