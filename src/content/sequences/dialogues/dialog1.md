@@ -285,8 +285,7 @@ Heu.. je trouve pas de camion sur le Figma.
 \
 {% dialog "Ju" %}
 
-Ha si j’ai les camions !\
-La séquence 1 c’est le premier fichier que tu m’avais envoyé ? 
+Ha si j’ai les camions ! La séquence 1 c’est le premier fichier que tu m’avais envoyé ? 
 
 {% enddialog %}\
 \
@@ -381,4 +380,63 @@ C’est un peu pété mais pour un proto ça montre les points de galère  \
 
 Et aussi ça montre aussi comment on s’approche plus de l’animation que de la bd \
 
+{% enddialog %}\
+\
+{% dialog "clem" %}\
+
+...\
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}\
+
+Never ending meetings. \
+L’enfer…\
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}\
+
+Ok 
+Rallonge de café et je suis à toi !\
+
+{% enddialog %}\
+\
+{% ladate "2022-05-01" %}\
+\
+{% dialog "Ju" %}\
+
+Hello! \
+Bon alors l’alignement bottom c’est pas mal
+Je check dans chrome \
+
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+Bon ça marche bien dans chrome aussi 
+Ça avance  
+
+{% enddialog %}\
+\
+{% ladate "2022-05-02" %}\
+\
+{% dialog "clem" %}\
+
+Yes ! \
+Maintenant donner la possibilité de ralentir la vitesse du passage entre deux images ! \
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}
+
+J'y ai passé un moment ce weekend, pas encore trouvé le meilleur biais 
+
+{% enddialog %}\
+\
+{% dialog "Ju" %}\
+
+Bon changement de plan\
+Demain c’est boulot, le petit est malade et il va pas à l’école \
+\
 {% enddialog %}
