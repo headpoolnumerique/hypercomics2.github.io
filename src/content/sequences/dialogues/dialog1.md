@@ -14,7 +14,7 @@ Bienvenue, Clément!
 T’as ramené la pizza j'espère !
 {% enddialog %}
 
-{% dialog "clem" %}
+{% dialog "clem" , "circonspect" %}
 
 Hello c'est bien ici le rendez-vous ? 
 
@@ -30,13 +30,13 @@ Toi?
 
 {% enddialog %}
 
-{% dialog "clem" %}
+{% dialog "clem" , "smile" %}
 
 Entre un tableau Excel d'admission en première année à rendre lundi 8h et un personnage qui marche en bas de mon écran 😉   
 
 {% enddialog %}
 
-{% dialog "Ju" %}
+{% dialog "Ju" , "happy" %}
 
 Lol, je vois 
 
@@ -64,7 +64,7 @@ Cool !
 
 {% dialog "Ju" %}
 
-J’ai commencé à regarder le scroll et les animation (idle) et au click. 
+J’ai commencé à regarder le scroll et les animations (idle) et au click. 
 {% enddialog %}
 
 {% dialog "clem" %}
