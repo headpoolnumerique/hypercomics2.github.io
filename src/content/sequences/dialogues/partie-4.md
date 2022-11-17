@@ -132,4 +132,40 @@ Ola ! Point HyperComics domani?
 
 {% enddialog %}\
 \
-{% ladate "2022-05-12" %}
+{% ladate "2022-05-12" %}\
+\
+{% dialog "Ju" , "smile" %}\
+\
+Yep \
+
+C’est le moment où tu me montres le setup que t'a montré Étienne avec les images nommées comme il faut et tout? \
+\
+{% enddialog %}\
+\
+{% dialog "clem" %}
+
+Là je suis plutôt sur le convoi mais je vais appliquer ce truc d'assets dessus voir si ça a une utilité pour nous 
+
+{% enddialog %}\
+\
+{% dialog "Ju" , "smile" %}\
+\
+Yep \
+
+C’est le moment où tu me montres le setup que t'a montré Étienne avec les images nommées comme il faut et tout? \
+\
+{% enddialog %}\
+\
+{% dialog "clem" , "circonspect" %}
+
+Là je suis plutôt sur le convoi mais je vais appliquer ce truc d'assets dessus voir si ça a une utilité pour nous 
+
+{% enddialog %}\
+\
+{% dialog "Ju" , "smile" %}
+
+Cool! \
+
+Je lutte avec cette histoire de scroll 
+
+{% enddialog %}
