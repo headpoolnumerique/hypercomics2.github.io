@@ -388,7 +388,9 @@ Et aussi ça montre aussi comment on s’approche plus de l’animation que de l
 
 …
 
-{% enddialog %}
+{% enddialog %}\
+\
+{% ladate "2022-04-28" %}
 
 {% dialog "Ju" %}
 
@@ -496,8 +498,6 @@ J’écoutais un podcast sur Monkey Island qui est un point & click et dont le p
 
 Des fois tu arrivais dans un lieu et tu avais déjà une conversation en cours qui se faisait sans toi 
 
-
-
 Et tu pouvais l’interrompre en lançant le dialogue…
 
 {% enddialog %}
@@ -506,9 +506,7 @@ Et tu pouvais l’interrompre en lançant le dialogue…
 
 Alors le dialogue c’est pas des voix mais du texte 
 
-
 Je cherche un exemple...
-
 
 Parce que je me rends compte qu’il manque d’onomatopées
 
