@@ -5,7 +5,6 @@ type: chat
 intro: text d’intro si on veut commencer par une vrai intro.
 order: 1
 ---
-
 {% ladate "2021-10-18" %}
 
 {% dialog "Ju" , "coucou" %}
@@ -496,6 +495,9 @@ J’écoutais un podcast sur Monkey Island qui est un point & click et dont le p
 {% dialog "Ju" %}
 
 Des fois tu arrivais dans un lieu et tu avais déjà une conversation en cours qui se faisait sans toi 
+
+
+
 Et tu pouvais l’interrompre en lançant le dialogue…
 
 {% enddialog %}
@@ -503,7 +505,11 @@ Et tu pouvais l’interrompre en lançant le dialogue…
 {% dialog "Ju" %}
 
 Alors le dialogue c’est pas des voix mais du texte 
+
+
 Je cherche un exemple...
+
+
 Parce que je me rends compte qu’il manque d’onomatopées
 
 {% enddialog %}
