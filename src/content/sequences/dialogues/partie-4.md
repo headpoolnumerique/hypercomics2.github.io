@@ -1,9 +1,11 @@
 ---
 title: partie 4
-date: 2022-05-05
+date: 2022-04-28
 type: chat
 order: 4
 ---
+{% ladate "2022-04-28" %}
+
 {% dialog "Ju" %}
 
 Never ending meetings. 
