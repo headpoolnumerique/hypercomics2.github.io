@@ -210,11 +210,14 @@ On est d’accord qu’à la fin du mois il faut qu’on ait les deux premières
 
 {% enddialog %}
 
-
 {% dialog "clem",  "fatigue"   %}
-
 
 undefined
 
+{% enddialog %}
+
+{% dialog "antho",  "undefined"   %}
+
+undefined
 
 {% enddialog %}
