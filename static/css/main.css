@@ -630,3 +630,8 @@ footer {
 section {
   scroll-snap-type: y mandatory;
 }
+
+.antho svg {display: none;}
+.antho .face {
+  grid-column: 1;
+}
