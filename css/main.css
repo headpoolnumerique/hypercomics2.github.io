@@ -429,7 +429,7 @@ footer {
 }
 
 .mail {
-  --portrait: 200px;
+  --portrait: 154px;
   display: grid;
   grid-template-columns: [clemface] var(--portrait) [clem] 1fr [overlap] 2fr [ju] 1fr [juface] var(
       --portrait
