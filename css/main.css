@@ -429,7 +429,7 @@ footer {
 }
 
 .mail {
-  --portrait: 154px;
+  --portrait: 200px;
   display: grid;
   grid-template-columns: [clemface] var(--portrait) [clem] 1fr [overlap] 2fr [ju] 1fr [juface] var(
       --portrait
@@ -629,4 +629,9 @@ footer {
 
 section {
   scroll-snap-type: y mandatory;
+}
+
+.antho svg {display: none;}
+.antho .face {
+  grid-column: 1;
 }

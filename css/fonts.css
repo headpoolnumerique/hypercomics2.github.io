@@ -7,44 +7,6 @@
 }
 
 @font-face {
-  font-family: "clemgrotest";
-  src: url("../fonts/clem/ClementPaurd-Regular-V1.otf") format("truetype");
-  font-weight: 400 ;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "clemgrotest";
-  src: url("../fonts/clem/ClementPaurd-Grade2.otf") format("truetype");
-  font-weight: 200 ;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "clemgrotest";
-  src: url("../fonts/clem/ClementPaurd-Grade3.otf") format("truetype");
-  font-weight: 500 ;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "clemgrotest";
-  src: url("../fonts/clem/ClementPaurd-Grade4.otf") format("truetype");
-  font-weight: 600 ;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "clemgrotest";
-  src: url("../fonts/clem/ClementPaurd-Grade5.otf") format("truetype");
-  font-weight: 900 ;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
   font-family: "tanker";
   src: url("../fonts/Tanker-Regular.woff2") format("truetype");
   font-weight: 400 ;
