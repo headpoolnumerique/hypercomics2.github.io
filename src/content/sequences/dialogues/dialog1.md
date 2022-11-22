@@ -388,8 +388,8 @@ Et aussi ça montre aussi comment on s’approche plus de l’animation que de l
 
 …
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% ladate "2022-04-28" %}
 
 {% dialog "Ju" %}

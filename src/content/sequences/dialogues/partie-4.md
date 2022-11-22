@@ -124,70 +124,56 @@ Je cherche un exemple...
 
 Parce que je me rends compte qu’il manque d’onomatopées
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "clem" %}
 
 Ola ! Point HyperComics domani? 
 
-{% enddialog %}\
-\
-{% ladate "2022-05-12" %}\
-\
-{% dialog "Ju" , "smile" %}\
-\
-Yep \
+{% enddialog %}
 
-C’est le moment où tu me montres le setup que t'a montré Étienne avec les images nommées comme il faut et tout? \
-\
-{% enddialog %}\
-\
-{% dialog "clem" %}
+{% ladate "2022-05-12" %}
 
-Là je suis plutôt sur le convoi mais je vais appliquer ce truc d'assets dessus voir si ça a une utilité pour nous 
 
-{% enddialog %}\
-\
-{% dialog "Ju" , "smile" %}\
-\
-Yep \
+{% dialog "Ju" , "smile" %}
 
-C’est le moment où tu me montres le setup que t'a montré Étienne avec les images nommées comme il faut et tout? \
-\
-{% enddialog %}\
-\
+Yep 
+
+C’est le moment où tu me montres le setup que t'a montré Étienne avec les images nommées comme il faut et tout? 
+
+{% enddialog %}
+
 {% dialog "clem" , "circonspect" %}
 
 Là je suis plutôt sur le convoi mais je vais appliquer ce truc d'assets dessus voir si ça a une utilité pour nous 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "Ju" , "smile" %}
 
-Cool! \
+Cool! 
 
 Je lutte avec cette histoire de scroll 
 
 {% enddialog %}
 
-{% dialog "antho",  "undefined"   %}
+{% dialog "antho"   %}
 
-undefined
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "clem" , "fatigue" %}
 
 Anthony m'a laissé entendre qu'il allait bientôt nous demander des nouvelles ;) 
 
-{% enddialog %}\
-\
-{% dialog "Ju" %}\
-\
-Ah ben j’espère bien\
-\
-Il est bien silencieux là \
-\
+{% enddialog %}
+
+{% dialog "Ju" %}
+
+Ah ben j’espère bien
+
+Il est bien silencieux là 
+
 {% enddialog %}
 
 {% dialog "clem" %}
@@ -198,12 +184,12 @@ Moi j'apprends les rudiments du parralaxe
 
 {% dialog "Ju" , "circonspect" %}
 
-Ça m’inquiète, mais allons y\
-\
+Ça m’inquiète, mais allons y
+
 Parce que c’est un gros mot 
 
-{% enddialog %}\
-\
+{% enddialog %}
+
 {% dialog "Ju" , "intello" %}
 
 On est d’accord qu’à la fin du mois il faut qu’on ait les deux premières séquences? 
@@ -212,12 +198,10 @@ On est d’accord qu’à la fin du mois il faut qu’on ait les deux premières
 
 {% dialog "clem",  "fatigue"   %}
 
-undefined
 
 {% enddialog %}
 
-{% dialog "antho",  "undefined"   %}
+{% dialog "antho"   %}
 
-undefined
 
 {% enddialog %}
